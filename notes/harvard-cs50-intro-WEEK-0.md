@@ -21,19 +21,23 @@ zeos and ones each circle reps neron
 Pseudocode is a human-readable version of your code.  
 For example, here’s how we might write pseudocode for searching a phone book:
 
-📞 Pick up phone book
-📖 Open to middle of phone book
-🔍 Look at page
-🔁 If person is on page
-📞 Call person
-❌ Else if person is earlier in book
-📚 Open to middle of left half of book
-🔁 Go back to line 3
-❌ Else if person is later in book
-📗 Open to middle of right half of book
-🔁 Go back to line 3
-🛑 Else
-🚫 Quit
+Here is an example of a simple algorithm written in pseudocode:
+
+```
+1  Pick up phone book
+2  Open to middle of phone book
+3  Look at page
+4  If person is on page
+5      Call person
+6  Else if person is earlier in book
+7      Open to middle of left half of book
+8      Go back to line 3
+9  Else if person is later in book
+10     Open to middle of right half of book
+11     Go back to line 3
+12 Else
+13     Quit
+```
 
 ## 🚨 Why Pseudocode Matters
 
@@ -59,25 +63,20 @@ For example, here’s how we might write pseudocode for searching a phone book:
   Instructions like *"go back to line 3"* — these allow you to repeat steps.
 
 🌟 These building blocks form the foundation of programming.  
+
+
 🧩 In Scratch (discussed below), we will use each of these basic building blocks.
 
-
-Absolutely — I totally get what you're saying. When you're pasting into a file on GitHub (or another code editor), you need the full block of text to be **copy-paste friendly**, without any unintended indentation or formatting that might accidentally place your new content inside a code block or table.
-
-Let me **redo the previous response** in a way that ensures **any new text you add afterward will be outside** of any formatting block — like code fences or indentation.
-
-Here's the **updated version** of the previous response, carefully structured for easy pasting and clean separation from any future content:
-
----
-
-```markdown
 # 🔮 What’s Ahead
 
 📆 This week, you’ll dive into **Scratch**, a visual programming language designed to make learning to code fun and accessible.
 
 🧠 Then, in the coming weeks, you’ll take your first steps into the world of **C**, a powerful and foundational programming language. Here's a sneak peek:
 
-```c
+---
+
+```markdown
+
 #include <stdio.h>
 
 int main(void)
@@ -105,3 +104,142 @@ int main(void)
 ❗ One of the biggest challenges in learning C is the **punctuation and syntax** — things like semicolons, curly braces, and pointer notation.
 
 🧯 But don’t worry — we’re going to **set all that aside for now** and focus purely on the **ideas** behind programming using **Scratch**.
+
+# 🎨 Scratch
+
+🎓 **Scratch** is a visual programming language developed by MIT.
+
+🧩 It uses the **same essential coding building blocks** we covered earlier in this lecture — like:
+
+- 🛠️ Functions  
+- ❓ Conditionals  
+- 🔁 Loops  
+- 🧮 Variables  
+
+🌈 The big advantage?  
+With Scratch, you can **focus on the logic and structure** of your programs without worrying about syntax details like:
+
+- ❌ Curly braces `{}`  
+- ❌ Semicolons `;`  
+- ❌ Parentheses `()`  
+
+🕹️ Scratch operates on a coordinate system
+
+# 🎯 Meow and Abstraction
+
+🧱 Along with pseudocoding, **abstraction** is a core skill and concept in computer programming.
+
+## 🧩 What is Abstraction?
+
+🧠 **Abstraction** means:
+> Simplifying a complex problem by breaking it down into smaller, more manageable pieces.
+
+### 🍽️ Real-World Example
+
+Imagine you’re hosting a **big dinner** for your friends.  
+The idea of cooking the entire meal might feel totally overwhelming! 😱
+
+But what if you break it down?
+
+- 🧅 Chop the vegetables  
+- 🍳 Cook the sauce  
+- 🍖 Prepare the main dish  
+- 🍰 Bake the dessert  
+
+Each step is **smaller and easier to handle** — and together, they make up the whole meal! 🍴
+
+## 🔍 Abstraction in Programming
+
+🛠️ Just like in cooking, **abstraction helps us manage complexity in code**.
+
+In programming — and even in **Scratch** — you’ll see abstraction in action:
+
+- 📦 Grouping related code into functions or blocks  
+- 🧩 Reusing pieces of logic without repeating code  
+- 🧹 Keeping your code clean, modular, and easy to understand  
+
+🧠 Think of it like this:  
+Abstraction lets you **focus on the big picture** while hiding the messy details behind a simplified interface.
+
+🐱 And yes — even a simple "meow" block in Scratch is an example of abstraction! 🐾
+
+🔎 Notice how even a few conversational responses require many lines of code.  
+Now imagine handling **thousands or tens of thousands** of possible interactions — that’s a *lot* of code!
+
+## 🧠 Modern AI: Training, Not Programming
+
+🧠 Instead of hardcoding every interaction, AI developers **train large language models (LLMs)** using massive datasets.
+
+📈 These models:
+- 🔍 Analyze patterns in huge blocks of text
+- 🤔 Predict what word or phrase is most likely to come next
+- 🔄 Learn from context, not strict rules
+
+## 💡 Why Use AI?
+
+⚡ AI-based tools are incredibly useful in many areas of life and work:
+- Writing
+- Research
+- Coding
+- Problem-solving
+
+### ✅ What is CS50.ai?
+
+🤖 **CS50.ai** is an AI assistant designed to:
+- 🆘 Help you when you're stuck
+- 💡 Offer hints and guidance
+- 🧠 Encourage your learning
+
+# 🤖 Artificial Intelligence
+
+🧠 Let's explore how we can use the programming building blocks to start building our own **artificial intelligence**.
+
+## 🗣️ A Simple Example
+
+Here’s a snippet of what **traditional rule-based AI** might look like in pseudocode:
+
+```
+If student says hello
+    Say hello
+Else if student says goodbye
+    Say goodbye 
+Else if student asks how you are
+    Say well
+Else if student asks why 111 in binary is 7 in decimal
+    ...
+```
+
+🔎 Notice how even a few conversational responses require many lines of code.  
+Now imagine handling **thousands or tens of thousands** of possible interactions — that’s a *lot* of code!
+
+## 🧠 Modern AI: Training, Not Programming
+
+🧠 Instead of hardcoding every interaction, AI developers **train large language models (LLMs)** using massive datasets.
+
+📈 These models:
+- 🔍 Analyze patterns in huge blocks of text
+- 🤔 Predict what word or phrase is most likely to come next
+- 🔄 Learn from context, not strict rules
+
+## 💡 Why Use AI?
+
+⚡ AI-based tools are incredibly useful in many areas of life and work:
+- Writing
+- Research
+- Coding
+- Problem-solving
+
+However, we **strongly advise** against using general AI tools in this course.
+
+## 🚫 CS50 Course Policy on AI
+
+📘 In this course, **you are not allowed** to use AI-based tools except for **CS50.ai** — a custom helper created specifically for this class.
+
+### ✅ What is CS50.ai?
+
+🤖 **CS50.ai** is an AI assistant designed to:
+- 🆘 Help you when you're stuck
+- 💡 Offer hints and guidance
+- 🧠 Encourage your learning
+
+
