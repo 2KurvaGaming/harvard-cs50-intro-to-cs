@@ -4,14 +4,85 @@
 
 ##
 
-## 🏫 SECTION: WEEK 0 SCRATCH
+## 🏫 SECTION: WEEK 0 - FOUNDATION + SCRATCH
 
-## -LECTURE VERBAL-
+## LECTURE VERBAL 
 
 ##
-👌 LLM - probability/statistics - implimented through neural networks. Biology 0 neruins transmit electrial signals
-zeos and ones each circle reps neron 
-    -## 🧠 Pseudocode
+
+## 🤖 What Is a Large Language Model (LLM)?
+🧠 LLM stands for **Large Language Model** — and it's one of the most powerful tools in modern artificial intelligence based on probability/statistics 
+
+**Large Language Models (LLMs)** are built using technology inspired by **how the human brain works**
+
+It learns by analyzing **massive amounts of text data**, like books, websites, and articles, and then uses that knowledge to:
+
+- 💬 Answer questions  
+- 📝 Write stories or essays  
+- 🧾 Generate code  
+- 📚 Translate languages  
+- 🧠 Explain complex ideas in simple terms
+
+Asking an LLM might predict:  
+`blue`, `clear`, or `full of clouds` — based on what it's seen in its training.
+
+This is how LLMs generate **coherent and contextually relevant responses**.
+
+## 🧱 Key Features of LLMs
+🧠 In short:
+> Neurons that fire together, wire together.
+
+## 🔁 What Is a Neural Network?
+
+A **neural network** is a type of computer system modeled after the human brain.
+
+It’s made up of **layers of artificial neurons** that work together to:
+- 📊 Process data  
+- 🔍 Recognize patterns  
+- 🧠 Make predictions
+
+Even though it's not alive like a real brain, it **learns in a similar way** — by adjusting how strongly each neuron affects the next, based on the data it sees.
+
+## 🤖 How This Applies to LLMs
+
+LLMs like the ones behind AI assistants use a special type of neural network called a **Transformer**.
+
+These networks:
+- 🧠 Learn from massive amounts of text  
+- 🔗 Understand how words relate to each other  
+- 🤔 Mimic how humans understand and build sentences
+
+Even though they're not alive, LLMs are **designed to act like a brain that’s really good at working with words**.
+
+## 🧠💻 Human Biology Meets Computer Science
+
+The amazing thing about AI is that it brings together:
+- 🧬 Biology (how the brain works)  
+- 🧮 Math (how models learn)  
+- 💻 Computer Science (how we build smart systems)
+
+This mix is what makes modern AI — and LLMs — so powerful.
+
+🧠 In the end, LLMs are like a **digital brain trained on books**, helping us write, think, and learn — all with a little inspiration from our own biology!
+## 
+
+- 🤔 **Understands context**: It can follow a conversation and respond based on what was said before.
+- 🧠 **Generates text**: It writes responses that sound natural and human-like.
+- 🧠🧠🧠 **Massive size**: LLMs are built using billions of data points and complex math.
+- 🛠️ **Versatile**: It can help with many tasks — from writing emails to debugging code.
+
+## 📌 Real-World Uses
+
+LLMs are used in:
+- 💬 Chatbots (like AI assistants)
+- 📝 Content creation
+- 🧑‍💻 Coding help
+- 🗣️ Voice assistants
+- 📚 Education tools
+
+In short, LLMs help make computers better at understanding and working with human language — which makes them incredibly useful in today’s world!
+
+# 🧠 Pseudocode
 
 📘 This process of converting instructions into code is called **pseudocode**.
 
@@ -55,6 +126,8 @@ Here is an example of a simple algorithm written in pseudocode:
   
 - **❓ Conditionals**  
   Phrases like `if`, `else if` — these allow your code to make decisions.
+
+  Conditionals are an essential building block of programming, where the program looks to see if a specific condition has been met. If a condition is met, the program does something.
   
 - **🧮 Boolean Expressions**  
   Statements like *"person is earlier in the book"* — these evaluate to `true` or `false`.
