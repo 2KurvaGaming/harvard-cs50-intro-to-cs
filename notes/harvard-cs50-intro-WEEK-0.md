@@ -229,17 +229,11 @@ Now imagine handling **thousands or tens of thousands** of possible interactions
 - Coding
 - Problem-solving
 
-However, we **strongly advise** against using general AI tools in this course.
-
-## 🚫 CS50 Course Policy on AI
-
-📘 In this course, **you are not allowed** to use AI-based tools except for **CS50.ai** — a custom helper created specifically for this class.
-
-### ✅ What is CS50.ai?
-
 🤖 **CS50.ai** is an AI assistant designed to:
 - 🆘 Help you when you're stuck
 - 💡 Offer hints and guidance
 - 🧠 Encourage your learning
 
+##
+# 🚧 Roadblocks 
 
