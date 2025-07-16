@@ -7,35 +7,10 @@
 
 ## LECTURE/ VERBAL 
 ### 🧑‍💻 KEY LESSONS🚀
+**📘 Visual Studio Code for CS50** Coding playground —  where the magic begins✨
 ---
 
-- **📘 Visual Studio Code for CS50**  
-  My trusty coding playground — where the magic begins! 💻✨
-- **👋 Hello World**  
-  The classic first step into the programming universe. 🌍
-- 📘 Visual Studio Code for CS50My trusty coding playground — where the magic begins!
-- 👋 Hello WorldThe classic first step into the programming universe.
-- 🏗️ From Scratch to CWent from dragging blocks to writing real code in C!
-- 📄 Header Files and CS50 Manual PagesLearned how to import tools and read the docs like a pro.
-- 🗣️ Hello, YouMade programs that actually talk to me (and ask for my name)!
-- 🔢 TypesDiscovered different data types — int, string, float, and more!
-- 🤔 ConditionalsTold my code to make decisions — if this, then that!
-- 🧮 OperatorsPlayed with +, -, ==, !=, and friends. Math just got fun!
-- 📦 VariablesStored and reused values like a coding wizard.
-- ⚖️ compare.cWrote a program to compare values — who's bigger?
-- ✅ agree.cLet users say yes or no — interaction time!
-- 🔁 Loops and meow.cMade my code repeat like a loop-de-loop rollercoaster!
-- 🧩 FunctionsBuilt reusable blocks of code — modularity FTW!
-- 🎨 Correctness, Design, StyleAimed for clean, working code that looks good too!
-- 🟥 MarioBuilt pyramids like a game dev — # by #.
-- 📝 CommentsLeft notes for future me — because why not?
-- ➕ More About OperatorsDug deeper into logical and bitwise magic.
-- ✂️ TruncationFound out what happens when numbers get cut short.
-- 🧾 Summing UpTime to reflect — I've leveled up in CS!
-
----
-
-### 🔁 From Source Code to Machine Code  
+## 🔁 From Source Code to Machine Code  
 - 🧠 Machines only speak binary  
   Deep down, computers understand just ones and zeros — it's all 1s and 0s to them.  
 - 📝 Humans write source code  
@@ -59,4 +34,41 @@
 - 🗑️ **`rm`**: Delete files — use with care, there's no undo button!  
 - 🗑️📁 **`rmdir`**: Delete entire folders — again, double-check before hitting enter!
 ---
+### 📋 Exploring the Terminal  
+- 📋 **`ls`**: **The most commonly used command** — lists all the files in the current directory. 
+- 🖥️ **Preconfigured IDE**: Because this IDE is set up with all the necessary software, you should use it to complete all assignments for this course.
+---
+# 👋 Hello World
 
+### 💻 Writing, Compiling, and Running Your First Program  
+- 📄 **`code hello.c`**: Opens the text editor to create your first C file — this is where you'll write your code.  
+- ⚙️ **`make hello`**: Compiles your code into machine-readable format — turning your ideas into something the computer understands.  
+- ▶️ **`./hello`**: Runs your compiled program — watch your code come to life!  
+
+```bash
+code hello.c
+make hello
+./hello
+```
+### 💻 Building Your First C Program  
+- 📄 **`code hello.c`**: Creates a new file and opens the text editor — this is where you'll write your first program.  
+- ⚙️ **`make hello`**: Compiles your C code into an executable file named `hello`.  
+- ▶️ **`./hello`**: Runs the compiled program — your first step into the world of C programming!  
+
+```bash
+code hello.c
+```
+
+```c
+// A program that says hello to the world
+
+#include <stdio.h>
+
+int main(void)
+{
+    printf("hello, world\n");
+}
+```
+##
+⚠️ Note that every single character matters. If even one is off, the program will not run. `printf` is a function that outputs text — notice the quotes, semicolon, and `\n`, which adds a new line after `hello, world`. Formatting is key ⚠️
+##
