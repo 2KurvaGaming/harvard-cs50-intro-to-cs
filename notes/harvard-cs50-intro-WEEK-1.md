@@ -1,9 +1,7 @@
 # 👨‍🏫 Harvard CS50 Foundations Notes 📓
 
 ⭐ This section will be for important notes as I go through the Harvard CS50's Foundations course.
-##
-## 🏫 SECTION: WEEK 1 - Language C
-
+## 🏫 SECTION: WEEK 1 - Variables - Operators - Functions - Loops - Problem Set 1 
 ## LECTURE/ VERBAL 
 ### 🧑‍💻 KEY LESSONS🚀
 **📘 Visual Studio Code for CS50** Coding playground —  where the magic begins✨
