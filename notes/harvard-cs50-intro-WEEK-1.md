@@ -2,7 +2,6 @@
 
 ⭐ This section will be for important notes as I go through the Harvard CS50's Foundations course.
 ##
-
 ## 🏫 SECTION: WEEK 1 - Language C
 
 ## LECTURE/ VERBAL 
@@ -69,6 +68,14 @@ int main(void)
     printf("hello, world\n");
 }
 ```
-##
+---
 ⚠️ Note that every single character matters. If even one is off, the program will not run. `printf` is a function that outputs text — notice the quotes, semicolon, and `\n`, which adds a new line after `hello, world`. Formatting is key ⚠️
-##
+
+---
+
+# ⚙️ Compiling and Running Your Program  
+- 🖥️ **`make hello`**: Switch back to the terminal and run this command to compile your code. Notice we *omit* `.c` — `make` automatically looks for `hello.c` and turns it into an executable program called `hello`.  
+- ✅ **No errors?** Great! That means your code compiled successfully — you’re ready to run it.  
+- ❌ **Errors?** No worries — double-check your code to make sure it matches exactly. Even one typo can stop the process.  
+- ▶️ **`./hello`**: Run your program with this command. Watch as it prints `hello, world` to the screen!  
+- 📁 **File Explorer (left panel)**: Open it to see both `hello.c` (your readable source code) and `hello` (the compiled, executable file that the computer runs).
