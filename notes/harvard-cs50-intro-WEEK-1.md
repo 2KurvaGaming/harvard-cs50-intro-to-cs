@@ -1,10 +1,10 @@
 # 👨‍🏫 Harvard CS50 Foundations Notes 📓
 
 ⭐ This section will be for important notes as I go through the Harvard CS50's Foundations course.
-## 🏫 SECTION: WEEK 1 - Variables - Operators - Functions - Loops - Problem Set 1 
-## LECTURE/ VERBAL 
-### 🧑‍💻 KEY LESSONS🚀
-**📘 Visual Studio Code for CS50** Coding playground —  where the magic begins✨
+## 🧑‍💻 KEY LESSONS🚀 WEEK 1 - Variables - Operators - Functions - Loops - Problem Set 1 
+## LECTURE / VERBAL 
+
+**📘 Visual Studio Code for CS50** Coding playground — where the magic begins✨
 ---
 
 ## 🔁 From Source Code to Machine Code  
@@ -21,10 +21,10 @@
 ---
 ## 🔧 Inside the Compiler: Tools You’ll Use  
 - 🧠 **The Compiler’s Structure**: The compiler can be divided into a number of regions — all designed to help you write, manage, and run your code with ease.  
-- 🖥️ **IDE (Integrated Development Environment)**: On the left side is the file explorer where you can find your files. In the middle is the text editor where you write and edit your programs. At the bottom is the terminal window where you can interact with the system using commands.  
+- 🖥️ **IDE (Integrated Development Environment)**: On the left side is the file explorer, where you can find your files. In the middle is the text editor where you write and edit your programs. At the bottom is the terminal window where you can interact with the system using commands.  
 - 🖱️ **Terminal Window (CLI)**: This is where you type commands to communicate directly with the computer in the cloud. It’s powerful, fast, and essential for developers.  
 - 📁 **`cd`**: Use this to move between folders — like walking through different rooms in a house.  
-- 📄 **`cp`**: Copy files or folders — like making a duplicate of a document.  
+- 📄 **`cp`**: Copy files or folders — like duplicating a document.  
 - 📋 **`ls`**: List all the files in your current folder — like checking what’s inside a drawer.  
 - 📁 **`mkdir`**: Create a brand-new folder — your own custom storage space.  
 - 🔄 **`mv`**: Move or rename files — like picking up a file and placing it somewhere else or giving it a new name.  
