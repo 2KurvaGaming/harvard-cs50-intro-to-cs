@@ -1,8 +1,8 @@
 # 👨‍🏫 Harvard CS50 Foundations Notes 📓
 
 ⭐ This section will be for important notes as I go through the Harvard CS50's Foundations course.
-## 🧑‍💻 KEY LESSONS🚀 WEEK 1 - Variables - Operators - Functions - Loops - Problem Set 1 
-## LECTURE / VERBAL 
+## 🧑‍💻 KEY LESSONS🚀 WEEK 1 - Variables - Operators - Functions - Loops - Problem Set 1 - C -
+## LECTURE / VERBAL ** https://manual.cs50.io/  **
 
 **📘 Visual Studio Code for CS50** Coding playground — where the magic begins✨
 ---
@@ -25,7 +25,13 @@
 - 🖱️ **Terminal Window (CLI)**: This is where you type commands to communicate directly with the computer in the cloud. It’s powerful, fast, and essential for developers.  
 - 📁 **`cd`**: Use this to move between folders — like walking through different rooms in a house.  
 - 📄 **`cp`**: Copy files or folders — like duplicating a document.  
-- 📋 **`ls`**: List all the files in your current folder — like checking what’s inside a drawer.  
+- 📋 **`ls`**: List all the files in your current folder — like checking what’s inside a drawer.
+- 🆕 **`\n`**: New line of coding. (\n \n wld be 2 line etc.)
+- ⬅️ **`\r`**: Moves cursor to the Beginning of the line ( not new line )
+- 🗣️ **`\"`**: Double quotaion marks
+- 🗣️ **`\'`**: Single quotaion marks
+- 🔣 **`\\`**: backslash marks 
+- 🗣️ **`\"`**: Double quotaion marks
 - 📁 **`mkdir`**: Create a brand-new folder — your own custom storage space.  
 - 🔄 **`mv`**: Move or rename files — like picking up a file and placing it somewhere else or giving it a new name.  
 - 🗑️ **`rm`**: Delete files — use with care, there's no undo button!  
