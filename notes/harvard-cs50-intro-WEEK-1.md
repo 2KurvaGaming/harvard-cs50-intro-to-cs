@@ -33,8 +33,8 @@
 - 🗣️ **`\"`**: Double quotaion marks
 - 📁 **`mkdir`**: Create a brand-new folder — your own custom storage space.  
 - 🔄 **`mv`**: Move or rename files — like picking up a file and placing it somewhere else or giving it a new name.  
-- 🗑️ **`rm`**: Delete files — use with care, there's no undo button!  
-- 🗑️📁 **`rmdir`**: Delete entire folders — again, double-check before hitting enter!
+- 🗑️ **`rm`**: remove files — use with care, there's no undo button!  
+- 🗑️📁 **`rmdir`**: remove directory - Delete entire folders — again, double-check before hitting enter!
 ---
 ### 📋 Exploring the Terminal  
 - 🖥️ **Preconfigured IDE**: Because this IDE is set up with all the necessary software, you should use it to complete all assignments for this course.
