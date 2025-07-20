@@ -38,7 +38,6 @@
 - 🗑️📁 **`rmdir`**: Delete entire folders — again, double-check before hitting enter!
 ---
 ### 📋 Exploring the Terminal  
-
 - 🖥️ **Preconfigured IDE**: Because this IDE is set up with all the necessary software, you should use it to complete all assignments for this course.
 ---
 # 👋 Hello World
