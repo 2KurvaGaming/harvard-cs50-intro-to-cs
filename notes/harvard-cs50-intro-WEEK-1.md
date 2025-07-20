@@ -31,13 +31,14 @@
 - 🗣️ **`\'`**: Single quotaion marks
 - 🔣 **`\\`**: backslash marks 
 - 🗣️ **`\"`**: Double quotaion marks
+- 📋 **`ls`**: **The most commonly used command** — lists all the files in the current directory. 
 - 📁 **`mkdir`**: Create a brand-new folder — your own custom storage space.  
 - 🔄 **`mv`**: Move or rename files — like picking up a file and placing it somewhere else or giving it a new name.  
 - 🗑️ **`rm`**: Delete files — use with care, there's no undo button!  
 - 🗑️📁 **`rmdir`**: Delete entire folders — again, double-check before hitting enter!
 ---
 ### 📋 Exploring the Terminal  
-- 📋 **`ls`**: **The most commonly used command** — lists all the files in the current directory. 
+
 - 🖥️ **Preconfigured IDE**: Because this IDE is set up with all the necessary software, you should use it to complete all assignments for this course.
 ---
 # 👋 Hello World
@@ -57,9 +58,9 @@ make hello
 - ⚙️ **`make hello`**: Compiles your C code into an executable file named `hello`.  
 - ▶️ **`./hello`**: Runs the compiled program — your first step into the world of C programming!  
 
-```bash
+---
 code hello.c
-```
+---
 
 ```c
 // A program that says hello to the world
