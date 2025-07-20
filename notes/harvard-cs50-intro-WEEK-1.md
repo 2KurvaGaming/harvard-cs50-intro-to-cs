@@ -6,7 +6,6 @@
 
 **📘 Visual Studio Code for CS50** Coding playground — where the magic begins✨
 ---
-
 ## 🔁 From Source Code to Machine Code  
 - 🧠 Machines only speak binary  
   Deep down, computers understand just ones and zeros — it's all 1s and 0s to them.  
