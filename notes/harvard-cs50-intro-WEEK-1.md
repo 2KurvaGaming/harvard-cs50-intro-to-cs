@@ -67,10 +67,12 @@ int main(void)
 ---
 
 # ⚙️ Compiling and Running Your Program  
-- 🖥️ **`make hello`**: Switch back to the terminal and run this command to compile your code. Notice we *omit* `.c` — `make` automatically looks for `hello.c` and turns it into an executable program called `hello`.  
+- 🖥️ **`make hello`**: Switch back to the terminal and run this command to compile your code.
+- Notice we *omit* `.c`
+- — `make` automatically looks for `hello.c` and turns it into an executable program called `hello`.  
 - ✅ **No errors?** Great! That means your code compiled successfully — you’re ready to run it.  
 - ❌ **Errors?** No worries — double-check your code to make sure it matches exactly. Even one typo can stop the process.  
-- ▶️ **`./hello`**: Run your program with this command. Watch as it prints `hello, world` to the screen!  
+- ▶️ **`./hello`**: Run your program with this command. 
 - 📁 **File Explorer (left panel)**: Open it to see both `hello.c` (your readable source code) and `hello` (the compiled, executable file that the computer runs).
 --- 
 # 🐱‍💻 **Functions in C**  
@@ -85,83 +87,51 @@ int main(void)
 - 📥 The `(void)` means that no values are being provided to the function  
 - 🧱 This function can be used in the main function as follows:  
   ```c  
-  // Abstraction  
+  // Meow once
   #include <stdio.h>  
   
-  void meow(void);  
-  
   int main(void)  
-  {  
-      for (int i = 0; i < 3; i++)  
-      {  
-          meow();  
-      }  
-  }  
-  
-  // Meow once  
-  void meow(void)  
   {  
       printf("meow\n");  
   }  
+  // OR //
+  
+  // Meow 3x's
+  #include <stdio.h>
+  
+  int main(void)
+  {  
+      printf("meow\n");
+      printf("meow\n");
+      printf("meow\n");
+  }
+
+  
   ```  
 - 🔍 Notice how the `meow` function is called with the `meow()` instruction  
 - 🔄 This is possible because the `meow` function is defined at the bottom of the code  
-- 📋 The prototype of the function is provided at the top of the code as `void meow(void)`  
+- 📋 The prototype of the function is provided at the top of the code as `int main(void)`  
 - 🛠️ Your `meow` function can be further modified to accept input:  
-  ```c  
-  // Abstraction with parameterization  
-  #include <stdio.h>  
-  
-  void meow(int n);  
-  
-  int main(void)  
-  {  
-      meow(3);  
-  }  
-  
-  // Meow some number of times  
-  void meow(int n)  
-  {  
-      for (int i = 0; i < n; i++)  
-      {  
-          printf("meow\n");  
-      }  
-  }  
-  ```  
-- 📈 Notice that the prototype has changed to `void meow(int n)` to show that `meow` accepts an `int` as its input
+
 ##
 🐱‍💻 **Functions with User Input in C**  
 - Additionally, we can get user input:  
   ```c  
-  // User input  
-  #include <cs50.h>  
+  // User input    
   #include <stdio.h>  
   
-  void meow(int n);  
-  
   int main(void)  
-  {  
-      int n;  
-      do  
+  {
+      int i = 0;
+      while (i < 3) 
       {  
-          n = get_int("Number: ");  
-      }  
-      while (n < 1);  
-      meow(n);  
-  }  
-  
-  // Meow some number of times  
-  void meow(int n)  
-  {  
-      for (int i = 0; i < n; i++)  
-      {  
-          printf("meow\n");  
-      }  
-  }  
+      printf("meow\n");
+      i++;
+      }
+  }
+
   ```  
-- 📥 Notice that `get_int` is used to obtain a number from the user  
-- 🔄 `n` is passed to `meow`  
-- 🧪 We can even test to ensure that the input provided by the user is correct:  
+
   ```c  
   // Return value  
   #include <cs50.h>  
@@ -197,8 +167,6 @@ int main(void)
       }  
   }  
   ```  
-- 📈 Notice that a new function called `get_positive_int` asks the user for an integer while `n < 1`  
-- 📤 After obtaining a positive integer, this function will return `n` back to the main function
 ---
 🎯 **Correctness, Design, Style**  
 - Code can be evaluated using three key criteria:  
