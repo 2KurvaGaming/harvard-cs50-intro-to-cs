@@ -122,11 +122,11 @@ int main(void)
 - 📋 The prototype of the function is provided at the top of the code as `int main(void)`  
 - 🛠️ Your `meow` function can be further modified to accept input:  
 - you can copy/paste the first line of your own function **So-called prototype of the function - Simply describes how to use the function-
-##
-🐱‍💻 **Functions with User Input in C**  
-- Additionally, we can get user input:  
-  ```c  
-  // User input  (WHILE LOOP EXAMPLE)
+
+# 🐱‍💻 **Functions with User Input in C**  
+Additionally, we can get user input:  
+ ```c  
+ // User input  (WHILE LOOP EXAMPLE)
   #include <stdio.h>  
   
   int main(void)  
