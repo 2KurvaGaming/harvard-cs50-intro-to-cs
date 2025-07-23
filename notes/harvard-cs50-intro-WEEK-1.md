@@ -1,4 +1,4 @@
-# 👨‍🏫 Harvard CS50 Foundations Notes 📓
+ # 👨‍🏫 Harvard CS50 Foundations Notes 📓
 
 ⭐ This section will be for important notes as I go through the Harvard CS50's Foundations course.
 ## 🧑‍💻 KEY LESSONS🚀 WEEK 1 - Variables - Operators - Functions - Loops - Problem Set 1 - C -
@@ -83,9 +83,7 @@ int main(void)
       printf("meow\n");  
   }  
   ```  
-- 📌 The initial `void` means that the function does not return any values  
-- 📥 The `(void)` means that no values are being provided to the function  
-- 🧱 This function can be used in the main function as follows:  
+- 🧱 This function can be used in the main function as follows:
   ```c  
   // Meow once
   #include <stdio.h>  
@@ -93,8 +91,9 @@ int main(void)
   int main(void)  
   {  
       printf("meow\n");  
-  }  
-  // OR //
+  }
+  
+        // OR //
   
   // Meow 3x's
   #include <stdio.h>
@@ -106,18 +105,28 @@ int main(void)
       printf("meow\n");
   }
 
-  
+- 📌 The initial `void` means that the function does not return any values  
+- 📥 The `(void)` means that no values are being provided to the function
+- ⭐ Basically the two voids mean no input, no output  
+    ```c
+    int main(void)
+    {
+        for (int i = 0; I < 3; i++)
+        {
+             meow();
+        }
+    }
   ```  
 - 🔍 Notice how the `meow` function is called with the `meow()` instruction  
 - 🔄 This is possible because the `meow` function is defined at the bottom of the code  
 - 📋 The prototype of the function is provided at the top of the code as `int main(void)`  
 - 🛠️ Your `meow` function can be further modified to accept input:  
-
+- you can copy/paste the first line of your own function **So-called prototype of the function - Simply describes how to use the function-
 ##
 🐱‍💻 **Functions with User Input in C**  
 - Additionally, we can get user input:  
   ```c  
-  // User input    
+  // User input  (WHILE LOOP EXAMPLE)
   #include <stdio.h>  
   
   int main(void)  
@@ -130,42 +139,24 @@ int main(void)
       }
   }
 
-  ```  
-
-  ```c  
+  ```
+     
+ ```c  
   // Return value  
   #include <cs50.h>  
-  #include <stdio.h>  
+  #include <stdio.h>
+   
+  void meow(void);
+
+  int main(void)
+   {
+    for (int i = 0; i < 3; i++)
+   {
+        meow();
+    }
+  }
   
-  int get_positive_int(void);  
-  void meow(int n);  
-  
-  int main(void)  
-  {  
-      int n = get_positive_int();  
-      meow(n);  
-  }  
-  
-  // Get number of meows  
-  int get_positive_int(void)  
-  {  
-      int n;  
-      do  
-      {  
-          n = get_int("Number: ");  
-      }  
-      while (n < 1);  
-      return n;  
-  }  
-  
-  // Meow some number of times  
-  void meow(int n)  
-  {  
-      for (int i = 0; i < n; i++)  
-      {  
-          printf("meow\n");  
-      }  
-  }  
+
   ```  
 ---
 🎯 **Correctness, Design, Style**  
