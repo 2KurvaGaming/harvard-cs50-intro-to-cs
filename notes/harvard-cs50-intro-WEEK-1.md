@@ -6,6 +6,10 @@
 
 **📘 Visual Studio Code for CS50** Coding playground — where the magic begins✨
 ---
+# Visual Studio Code for CS50
+
+- 🖥️ `vscode-cs50` – The text editor that is utilized for this course is Visual Studio Code, aka VS Code, affectionately referred to as [cs50.dev](https://cs50.dev/), which can be accessed via that same URL
+
 ## 🔁 From Source Code to Machine Code  
 - 🧠 Machines only speak binary  
   Deep down, computers understand just ones and zeros — it's all 1s and 0s to them.  
@@ -20,17 +24,17 @@
 ---
 ## 🔧 Inside the Compiler: Tools You’ll Use  
 - 🧠 **The Compiler’s Structure**: The compiler can be divided into a number of regions — all designed to help you write, manage, and run your code with ease.  
-- 🖥️ **IDE (Integrated Development Environment)**: On the left side is the file explorer, where you can find your files. In the middle is the text editor where you write and edit your programs. At the bottom is the terminal window where you can interact with the system using commands.  
-- 🖱️ **Terminal Window (CLI)**: This is where you type commands to communicate directly with the computer in the cloud. It’s powerful, fast, and essential for developers.  
+- 🖥️ **IDE (Integrated Development Environment)**: On the left side is the file explorer, where you can find your files.
+-  In the middle is the **text editor** where you write and edit your programs. At the bottom is the terminal window where you can interact with the system using commands.  
+- 🖱️ Finally, **Terminal Window (CLI * command line interface)**: This is where you type commands to communicate directly with the computer in the cloud. It’s powerful, fast, and essential for developers.  
 - 📁 **`cd`**: Use this to move between folders — like walking through different rooms in a house.  
 - 📄 **`cp`**: Copy files or folders — like duplicating a document.  
-- 📋 **`ls`**: **The most commonly used command** — lists all the files in the current directory. 
+- 📋 **`\ls`**: **The most commonly used command** — lists all the files in the current directory. 
 - 🆕 **`\n`**: New line of coding. (\n \n wld be 2 line etc.)
 - ⬅️ **`\r`**: Moves cursor to the Beginning of the line ( not new line )
 - 🗣️ **`\"`**: Double quotaion marks
 - 🗣️ **`\'`**: Single quotaion marks
 - 🔣 **`\\`**: backslash marks 
-- 🗣️ **`\"`**: Double quotaion marks
 - 📁 **`mkdir`**: Create a brand-new folder — your own custom storage space.  
 - 🔄 **`mv`**: Move or rename files — like picking up a file and placing it somewhere else or giving it a new name.  
 - 🗑️ **`rm`**: remove files — use with care, there's no undo button!  
@@ -42,9 +46,9 @@
 # 👋 Hello World
 
 ### 💻 Writing, Compiling, and Running Your First Program  
-- 📄 **`code hello.c`**: Creates a new file and opens the text editor — this is where you'll write your first program. 
-- ⚙️ **`make hello`**: Compiles your code into machine-readable format — an executable file named `hello`. 
-- ▶️ **`./hello`**: Runs your compiled program — watch your code come to life!  
+- 📄 **`code hello.c`**: Creates a new file and allows us to type instructions for this program 
+- ⚙️ **`make hello`**: Compiles the file from out instructions in C and creates an executable file named `hello`. 
+- ▶️ **`./hello`**: Runs your compiled program called hello — watch your code come to life!  
 
 ```bash
 code hello.c
@@ -62,19 +66,151 @@ int main(void)
 }
 ```
 ---
-⚠️ Note that every single character matters. If even one is off, the program will not run. `printf` is a function that outputs text — notice the quotes, semicolon, and `\n`, which adds a new line after `hello, world`. Formatting is key ⚠️
-
+⚠️ Note that every single character serves a purpose. If you type it incorrectly, the program will not run. `printf` is a function that can output a line of text — notice the quotes, semicolon, and `\n`, which adds a new line after `hello, world`. Formatting is key ⚠️
 ---
-
 # ⚙️ Compiling and Running Your Program  
 - 🖥️ **`make hello`**: Switch back to the terminal and run this command to compile your code.
 - Notice we *omit* `.c`
-- — `make` automatically looks for `hello.c` and turns it into an executable program called `hello`.  
+- — `make` is a compiler that will automatically look for `hello.c` file and turn it into an executable program called `hello`.  
 - ✅ **No errors?** Great! That means your code compiled successfully — you’re ready to run it.  
 - ❌ **Errors?** No worries — double-check your code to make sure it matches exactly. Even one typo can stop the process.  
 - ▶️ **`./hello`**: Run your program with this command. 
-- 📁 **File Explorer (left panel)**: Open it to see both `hello.c` (your readable source code) and `hello` (the compiled, executable file that the computer runs).
+- 📁 **File Explorer (left panel)**: Open it to see both a file called `hello.c` (your readable source code) and `hello` (the compiled, executable file that the computer runs).
+- ⭐`./hello` is able to be read by the compiler: It’s where your code is stored.
+- 👉 hello is an executable file that you can run but cannot be read by the compiler.
+#
+🧩 From Scratch to C
 --- 
+- 🧩 In Scratch, we utilized the say block to display any text on the screen. Indeed, in C, we have a function called printf that does exactly this.  
+- 🔍 `code-observation` – Notice our code already invokes this function:  
+  ```c
+  printf("hello, world\n");
+  ```
+- 📥 `function-details` – Notice that the printf function is called. The argument passed to printf is hello, world\n. The statement of code is closed with a ;
+- ❌ Errors in code are common. Modify your code as follows:   
+  ```c
+  // \n is missing
+  #include <stdio.h>
+
+  int main(void)
+  {
+      printf("hello, world");
+  }
+  ```
+- ⚠️ Notice the \n is now gone?
+- In your terminal window, run make hello. Typing ./hello in the terminal window.
+- This \ character is called an **escape character** that tells the compiler that \n is a special instruction to create a line break.
+---
+# There are other escape characters you can use:
+---
+```c
+\n  create a new line
+\r  return to the start of a line
+\"  print a double quote
+\'  print a single quote
+\\  print a backslash
+```
+---
+# Restore your program to the following:
+```c
+// A program that says hello to the world
+
+#include <stdio.h>
+
+int main(void)
+{
+    printf("hello, world\n");
+}
+```
+ 👉 Notice the semicolon and \n have been restored.
+---
+# ⭐⭐ Header Files and CS50 Manual Pages
+- The statement at the start of the code **#include <stdio.h>** is a very special command that tells the **compiler** that you want to use the capabilities of a library called stdio.h, a **header file**. This allows you, among many other things, to utilize the printf function.
+- A library is a collection of code and functions created by others in the past that we can utilize in our code.
+You can read about all the capabilities of this library on the Manual Pages. The Manual Pages provide a means by which to better understand what various commands do and how they function.
+It turns out that CS50 has its own library called cs50.h. There are numerous functions that are included that provide training wheels while you get started in C:
+```c
+get_char
+get_double
+get_float
+get_int
+get_long
+get_string
+```
+# 👋 Hello, You
+---
+- Recall that in Scratch we could ask the user, “What’s your name?” and say “hello” with that name appended to it.
+- In C, we can do the same. Modify your code as follows:
+```c
+// get_string and printf with incorrect placeholder
+
+#include <stdio.h>
+
+int main(void)
+{
+    string answer = get_string("What's your name? ");
+    printf("hello, answer\n");
+}
+```
+- The get_string function is used to get a string from the user. Then, the variable answer is passed to the printf function.
+- Running make hello again in the terminal window, notice that numerous errors appear.
+- Looking at the errors, string and get_string are not recognized by the compiler. We have to teach the compiler these features by adding a library called cs50.h. Also, we notice that answer is not provided as we intended. Modify your code as follows:
+```c
+// get_string and printf with %s
+
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+    string answer = get_string("What's your name? ");
+    printf("hello, %s\n", answer);
+}
+```
+- The get_string function is used to get a string from the user. Then, the variable answer is passed to the printf function. `%s` tells the printf function to prepare itself to receive a string.
+- Now, running **make hello** again in the terminal window, you can run your program by typing `./hello`. The program now asks for your name and then says hello with your name attached, as intended.
+answer is a special holding place we call a variable. answer is of type string and can hold any string within it. There are many data types, such as int, bool, char, and many others.
+☑️ - `%s` is a placeholder called a ***format code*** that tells the `printf` function to prepare to receive a string. `answer` is the `string` being passed to `%s`.
+---
+# ⭐⭐ TYPES 
+- `printf` allows for many format codes. Here is a non-comprehensive list of ones you may utilize in this course:
+```c
+%c
+%f
+%i
+%li
+%s
+```
+%s is used for string variables. %i is used for int or integer variables. You can find out more about this on the Manual Pages
+- These format codes correspond to the many data types that are available within C:
+```c
+bool
+char
+float
+int
+long
+string
+...
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # 🐱‍💻 **Functions in C**  
 - While we will provide much more guidance later, you can create your own function within C as follows:  
   ```c  
