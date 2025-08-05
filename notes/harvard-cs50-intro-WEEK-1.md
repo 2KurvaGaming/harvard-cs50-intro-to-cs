@@ -31,7 +31,7 @@
 - 📄 **`cp`**: Copy files or folders — like duplicating a document.  
 - 📋 **`\ls`**: **The most commonly used command** — lists all the files in the current directory. 
 - 🆕 **`\n`**: New line of coding. (\n \n wld be 2 line etc.)
-- ⬅️ **`\r`**: Moves cursor to the Beginning of the line ( not new line )
+- ⬅️ **`\r`**: Moves cursor to the Beginning of the line ( not new line ).
 - 🗣️ **`\"`**: Double quotaion marks
 - 🗣️ **`\'`**: Single quotaion marks
 - 🔣 **`\\`**: backslash marks 
