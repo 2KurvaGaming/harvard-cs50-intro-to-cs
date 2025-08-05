@@ -4,9 +4,9 @@
 ## 🧑‍💻 KEY LESSONS🚀 WEEK 1 - Variables - Operators - Functions - Loops - Problem Set 1 - C -
 ## LECTURE / VERBAL ** https://manual.cs50.io/  **
 
-**📘 Visual Studio Code for CS50** Coding playground — where the magic begins✨
+*📘 Visual Studio Code for CS50** Coding playground — where the magic begins✨
 ---
-# Visual Studio Code for CS50
+## Visual Studio Code for CS50
 
 - 🖥️ `vscode-cs50` – The text editor that is utilized for this course is Visual Studio Code, aka VS Code, affectionately referred to as [cs50.dev](https://cs50.dev/), which can be accessed via that same URL
 
@@ -192,6 +192,495 @@ long
 string
 ...
 ```
+# 👌 Conditionals 
+---
+- Another building block you utilized within Scratch was **conditionals.** For example, you might want to do one thing if x is greater than y.
+- Further, you might want to do something else if that condition is not met.
+  
+⭐ In C, you can compare two values as follows:
+```c
+// Conditionals that are mutually exclusive
+
+if (x < y)
+{
+    printf("x is less than y\n");
+}
+else
+{
+    printf("x is not less than y\n");
+}
+```
+👉 Notice how if x < y, one outcome occurs. If x is not less than y, then another outcome occurs.
+- Similarly, we can plan for three possible outcomes:
+```c
+// Conditional that isn't necessary
+
+if (x < y)
+{
+    printf("x is less than y\n");
+}
+else if (x > y)
+{
+    printf("x is greater than y\n");
+}
+else if (x == y)
+{
+    printf("x is equal to y\n");
+}
+```
+👉 Notice that not all these lines of code are required. How could we eliminate the unnecessary calculation above?
+---
+```c
+// Compare integers
+
+if (x < y)
+{
+    printf("x is less than y\n");
+}
+else if (x > y)
+{
+    printf("x is greater than y\n");
+}
+else
+{
+    printf("x is equal to y\n");
+}
+```
+👉 Notice how the final statement is replaced with else.
+---
+# ☎️ Operators
+---
+**Operators** refer to the **_mathematical operations_** that are supported by your compiler. In C, these mathematical operators include:
+Operator | Function
+- `+` → Addition
+- `-` → Subtraction
+- `*` → Multiplication
+- `/` → Division
+- `%` → Remainder (Modulo)
+  ⭐ Modulo, often represented by the symbol %, calculates the remainder of a division operation. For example, 7 modulo 3 (written as 7 % 3) equals 1, because 7 divided by 3 is 2 with a remainder of 1.
+---
+# 🔣 Variables
+---
+- In C, you can assign a value to an `int` variable as follows:
+  ```c
+  int counter = 0;
+  ```
+- This declares an integer variable named counter and initializes it to 0.
+👉 Notice how a variable called counter of type int is assigned the value 0.
+---
+```c
+- In C, you can assign a value to an `int` variable as follows:
+  ```c
+  int counter = 0;
+  ```
+- This declares an integer variable named `counter` and initializes it to `0`.
+- C can also be programmed to add one to counter as follows:
+  ```c
+  counter = counter + 1;
+  ```
+⭕ Notice how 1 is added to the value of counter.
+This can be also represented as:
+  ```c
+  counter += 1;
+  ```
+  - Equivalent to `counter = counter + 1`.
+- It can be further simplified using the increment operator:
+  ```c
+  counter++;
+  ```
+⭕ Notice how the ++ is used to add 1.
+   - `++` automatically increments `counter` by `1`.
+   - 
+- To subtract `1` from `counter`:
+  ```c
+  counter--;
+  ```
+  - Decrements `counter` by `1` (same as `counter = counter - 1`).
+---
+⭕ You can also subtract one from counter as follows:
+ ```c
+counter--;
+```
+⭕ Notice how 1 is removed from the value of counter.
+---
+## compare.c
+---
+```bash
+// Conditional, Boolean expression, relational operator
+
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+    // Prompt user for integers
+    int x = get_int("What's x? ");
+    int y = get_int("What's y? ");
+
+    // Compare integers
+    if (x < y)
+    {
+        printf("x is less than y\n");
+    }
+```
+👉 Notice that we create two variables, an int or integer called x and another called y. 
+-   The values of these are populated using the get_int function.
+-   You can run your code by executing make compare in the terminal window, followed by ./compare. If you get     any error messages, check your code for errors.
+-   Flow charts are a way by which you can examine how a computer program functions. Such charts can be used      to examine the efficiency of our code
+-   Looking at a flow chart of the above code, we can notice numerous shortcomings
+-   We can improve your program by coding as follows:
+```bash
+// Conditionals
+
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+    // Prompt user for integers
+    int x = get_int("What's x? ");
+    int y = get_int("What's y? ");
+
+    // Compare integers
+    if (x < y)
+    {
+        printf("x is less than y\n");
+    }
+    else if (x > y)
+    {
+        printf("x is greater than y\n");
+    }
+    else
+    {
+        printf("x is equal to y\n");
+    }
+}
+```
+👉 Notice that all potential outcomes are now accounted for.
+- You can re-make and re-run your program and test it out.
+- Examining this program on a flow chart, you can see the efficiency of our code design decisions.
+---
+👀 agree.c
+---
+- Considering another data type called a char, we can start a new program by typing code agree.c into the       terminal window.
+- Where a string is a series of characters, a char is a single character.
+---
+```bash
+// Comparing against lowercase char
+
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+    // Prompt user to agree
+    char c = get_char("Do you agree? ");
+
+    // Check whether agreed
+    if (c == 'y')
+    {
+        printf("Agreed.\n");
+    }
+    else if (c == 'n')
+    {
+        printf("Not agreed.\n");
+    }
+}
+```
+👉  Notice that additional options are offered. However, this is not efficient code.
+---
+```bash
+// Logical operators
+
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+    // Prompt user to agree
+    char c = get_char("Do you agree? ");
+
+    // Check whether agreed
+    if (c == 'Y' || c == 'y')
+    {
+        printf("Agreed.\n");
+    }
+    else if (c == 'N' || c == 'n')
+    {
+        printf("Not agreed.\n");
+    }
+}
+```
+👉 Notice that || effectively means or.
+## Loops and meow.c
+---
+- We can also utilize the loop building block from Scratch in our C programs.
+- In your terminal window, type code meow.c and write code as follows:
+```bash
+// Opportunity for better design
+
+#include <stdio.h>
+
+int main(void)
+{
+    printf("meow\n");
+    printf("meow\n");
+    printf("meow\n");
+}
+```
+---
+- We can improve our program by modifying your code as follows:
+  ---
+```bash
+// Better design
+
+#include <stdio.h>
+
+int main(void)
+{
+    int i = 3;
+    while (i > 0)
+    {
+        printf("meow\n");
+        i--;
+    }
+}
+```
+---
+👉 Notice that we create an int called i and assign it the value 3. Then, we create a while loop that will run as long as i > 0. Then, the loop runs. Every time 1 is subtracted to i using the i-- statement.
+- Generally, in computer science, we count from zero. Best to revise your code as follows:
+```bash
+// Better design
+
+#include <stdio.h>
+
+int main(void)
+{
+    int i = 0;
+    while (i < 3)
+    {
+        printf("meow\n");
+        i++;
+    }
+}
+```
+- Notice we now count from zero.
+- Another tool in our toolbox for looping is a for loop.
+- You can further improve the design of our meow.c program using a for loop.
+- Modify your code as follows:
+```bash
+// Better design
+
+#include <stdio.h>
+
+int main(void)
+{
+    for (int i = 0; i < 3; i++)
+    {
+        printf("meow\n");
+    }
+}
+```
+- Notice that the for loop includes three arguments. The first argument int i = 0 starts our counter at zero. The second argument i < 3 is the condition that is being checked. Finally, the argument i++ tells the loop to increment by one each time the loop runs.
+- We can even loop forever using the following code:
+```bash
+// Infinite loop
+
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+    while (true)
+    {
+        printf("meow\n");
+    }
+}
+```
+- Notice that true will always be the case. Therefore, the code will always run. You will lose control of your terminal window by running this code. You can break from an infinite loop by hitting control-C on your keyboard.
+  ## Functions
+---
+- While we will provide much more guidance later, you can create your own function within C as follows:
+```bash
+void meow(void)
+{
+    printf("meow\n");
+}
+```
+- The initial void means that the function does not return any values. The (void) means that no values are     being provided to the function.
+- This function can be used in the main function as follows:
+```bash
+// Abstraction
+
+#include <stdio.h>
+
+void meow(void);
+
+int main(void)
+{
+    for (int i = 0; i < 3; i++)
+    {
+        meow();
+    }
+}
+
+// Meow once
+void meow(void)
+{
+    printf("meow\n");
+}
+```
+- Notice how the meow function is called with the meow() instruction.
+- This is possible because the meow function is defined at the bottom of the code, and the prototype of the function is provided at the top of the code as void meow(void).
+- Your meow function can be further modified to accept input:
+```bash
+// Abstraction with parameterization
+
+#include <stdio.h>
+
+void meow(int n);
+
+int main(void)
+{
+    meow(3);
+}
+
+// Meow some number of times
+void meow(int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        printf("meow\n");
+    }
+}
+```
+- Notice that the prototype has changed to void meow(int n) to show that meow accepts an int as its input.
+- Additionally, we can get user input:
+```bash
+// User input
+
+#include <cs50.h>
+#include <stdio.h>
+
+void meow(int n);
+
+int main(void)
+{
+    int n;
+    do
+    {
+        n = get_int("Number: ");
+    }
+    while (n < 1);
+    meow(n);
+}
+
+// Meow some number of times
+void meow(int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        printf("meow\n");
+    }
+}
+```
+- Notice that get_int is used to obtain a number from the user. n is passed to meow.
+- We can even test to ensure that the input we get provided by the user is correct:
+```bash
+// Return value
+
+#include <cs50.h>
+#include <stdio.h>
+
+int get_positive_int(void);
+void meow(int n);
+
+int main(void)
+{
+    int n = get_positive_int();
+    meow(n);
+}
+
+// Get number of meows
+int get_positive_int(void)
+{
+    int n;
+    do
+    {
+        n = get_int("Number: ");
+    }
+    while (n < 1);
+    return n;
+}
+
+// Meow some number of times
+void meow(int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        printf("meow\n");
+    }
+}
+```
+- Notice that a new function called get_positive_int asks the user for an integer while n < 1.
+- After obtaining a positive integer, this function will return n back to the main function.
+---
+# ⭐ Correctness, Design, Style
+---
+ - Code can be evaluated upon three axes
+ - First, correctness refers to “Does the code run as intended?”
+ - You can check the correctness of your code with check50.
+ - Second, design refers to “How well is the code designed?”
+ - You can evaluate the design of your code using design50.
+ - Finally, style refers to “How aesthetically pleasing and consistent is the code?”
+ - You can evaluate the style of your code with style50.
+ # Mario
+ ---
+ - Everything we’ve discussed today has focused on various building blocks of your work as an emerging computer scientist.
+ - The following will help you orient toward working on a problem set for this class in general: How does one approach a computer science-related problem?
+ - Imagine we wanted to emulate the visual of the game Super Mario Bros. Considering the four question blocks pictured, how could we create code that roughly represents these four horizontal blocks?
+
+<img width="960" height="540" alt="cs50Week1Mario1" src="https://github.com/user-attachments/assets/950dc12b-4483-4056-8eb5-496586e39401" />
+
+In the terminal window, type code mario.c and code as follows:
+```bash
+// Prints a row of 4 question marks with a loop
+
+#include <stdio.h>
+
+int main(void)
+{
+    for (int i = 0; i < 4; i++)
+    {
+        printf("?");
+    }
+    printf("\n");
+}
+```
+ - Notice how four question marks are printe![Uploading cs50Week1Slide125.png…]()
+d here using a loop.
+ - Similarly, we can apply this same logic to create three vertical blocks.
+
+<img width="960" height="540" alt="cs50Week1Mario1" src="https://github.com/user-attachments/assets/9e680a8b-0abc-44d7-85cc-5b66591c2cce" />
+- To accomplish this modify your code as follows:
+``` bash
+// Prints a column of 3 bricks with a loop
+
+#include <stdio.h>
+
+int main(void)
+{
+    for (int i = 0; i < 3; i++)
+    {
+        printf("#\n");
+    }
+}
+```
+- Notice how three vertical bricks are printed using a loop
+- What if we wanted to combine these ideas to create a three-by-three group of blocks?
+
+<img width="960" height="540" alt="cs50Week1three vertical blocks" src="https://github.com/user-attachments/assets/9fbd6450-6eec-49b6-86b2-fc426f04dd90" />
+
 
 
 
