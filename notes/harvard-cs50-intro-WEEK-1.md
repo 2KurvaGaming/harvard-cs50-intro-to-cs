@@ -101,9 +101,10 @@ int main(void)
 - In your terminal window, run make hello. Typing ./hello in the terminal window.
 - This \ character is called an **escape character** that tells the compiler that \n is a special instruction to create a line break.
 ---
-# There are other escape characters you can use:
+# ⚠️ There are other escape characters you can use
 ---
-```c
+
+```bash
 \n  create a new line
 \r  return to the start of a line
 \"  print a double quote
@@ -112,7 +113,7 @@ int main(void)
 ```
 ---
 # Restore your program to the following:
-```c
+```bash
 // A program that says hello to the world
 
 #include <stdio.h>
@@ -290,20 +291,20 @@ This can be also represented as:
   ```
 ⭕ Notice how the ++ is used to add 1.
    - `++` automatically increments `counter` by `1`.
-   - 
+    
 - To subtract `1` from `counter`:
   ```c
   counter--;
   ```
   - Decrements `counter` by `1` (same as `counter = counter - 1`).
----
 ⭕ You can also subtract one from counter as follows:
  ```c
 counter--;
 ```
 ⭕ Notice how 1 is removed from the value of counter.
+
 ---
-## compare.c
+## 🙉 compare.c
 ---
 ```bash
 // Conditional, Boolean expression, relational operator
@@ -412,7 +413,8 @@ int main(void)
 }
 ```
 👉 Notice that || effectively means or.
-## Loops and meow.c
+
+## ➰ Loops and meow.c
 ---
 - We can also utilize the loop building block from Scratch in our C programs.
 - In your terminal window, type code meow.c and write code as follows:
@@ -642,7 +644,7 @@ void meow(int n)
 
 <img width="960" height="540" alt="cs50Week1Mario1" src="https://github.com/user-attachments/assets/950dc12b-4483-4056-8eb5-496586e39401" />
 
-In the terminal window, type code mario.c and code as follows:
+In the terminal window, `type code mario.c` and code as follows:
 ```bash
 // Prints a row of 4 question marks with a loop
 
@@ -657,12 +659,13 @@ int main(void)
     printf("\n");
 }
 ```
- - Notice how four question marks are printe![Uploading cs50Week1Slide125.png…]()
-d here using a loop.
- - Similarly, we can apply this same logic to create three vertical blocks.
+ - 🔁 Notice how four question marks are printed using a `for` loop
+##
+ - Just like printing horizontal question marks, we can apply the same logic to create **three vertical blocks**  
+- Instead of printing all `?` on the same line, we'll print one per line
 
-<img width="960" height="540" alt="cs50Week1Mario1" src="https://github.com/user-attachments/assets/9e680a8b-0abc-44d7-85cc-5b66591c2cce" />
-- To accomplish this modify your code as follows:
+<img width="960" height="540" alt="cs50Week1three vertical blocks" src="https://github.com/user-attachments/assets/9fbd6450-6eec-49b6-86b2-fc426f04dd90" />
+### Example Code
 ``` bash
 // Prints a column of 3 bricks with a loop
 
@@ -676,315 +679,71 @@ int main(void)
     }
 }
 ```
-- Notice how three vertical bricks are printed using a loop
-- What if we wanted to combine these ideas to create a three-by-three group of blocks?
-
-<img width="960" height="540" alt="cs50Week1three vertical blocks" src="https://github.com/user-attachments/assets/9fbd6450-6eec-49b6-86b2-fc426f04dd90" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# 🐱‍💻 **Functions in C**  
-- While we will provide much more guidance later, you can create your own function within C as follows:  
-  ```c  
-  void meow(void)  
-  {  
-      printf("meow\n");  
-  }  
-  ```  
-- 🧱 This function can be used in the main function as follows:
-  ```c  
-  // Meow once
-  #include <stdio.h>  
-  
-  int main(void)  
-  {  
-      printf("meow\n");  
-  }
-  
-        // OR //
-  
-  // Meow 3x's
-  #include <stdio.h>
-  
-  int main(void)
-  {  
-      printf("meow\n");
-      printf("meow\n");
-      printf("meow\n");
-  }
-
-- 📌 The initial `void` means that the function does not return any values  
-- 📥 The `(void)` means that no values are being provided to the function
-- ⭐ Basically the two voids mean no input, no output  
-    ```c
-    int main(void)
-    {
-        for (int i = 0; I < 3; i++)
-        {
-             meow();
-        }
-    }
-  ```  
-- 🔍 Notice how the `meow` function is called with the `meow()` instruction  
-- 🔄 This is possible because the `meow` function is defined at the bottom of the code  
-- 📋 The prototype of the function is provided at the top of the code as `int main(void)`  
-- 🛠️ Your `meow` function can be further modified to accept input:  
-- you can copy/paste the first line of your own function **So-called prototype of the function - Simply describes how to use the function-
-
-# 🐱‍💻 **Functions with User Input in C**  
-Additionally, we can get user input:  
- ```c  
- // User input  (WHILE LOOP EXAMPLE)
-  #include <stdio.h>  
-  
-  int main(void)  
-  {
-      int i = 0;
-      while (i < 3) 
-      {  
-      printf("meow\n");
-      i++;
-      }
-  }
-
-  ```
-     
- ```c  
-  // Return value  
-  #include <cs50.h>  
-  #include <stdio.h>
-   
-  void meow(void);
-
-  int main(void)
-   {
-    for (int i = 0; i < 3; i++)
-   {
-        meow();
-    }
-  }
-
-void meow(void)
-{
-    printf("meow\n"); 
- }
-  ```  
 ---
-🎯 **Correctness, Design, Style**  
-- Code can be evaluated using three key criteria:  
-- ✅ **Correctness** refers to *"Does the code run as intended?"*  
-  - Checked using `check50`  
-- 🎨 **Design** refers to *"How well is the code designed?"*  
-  - Evaluated using `design50`  
-- 🧼 **Style** refers to *"How aesthetically pleasing and consistent is the code?"*  
-  - Assessed with `style50`
-
----
-
-🔄 **Let’s go again—but this time with tighter formatting and no trailing message:**
-
-❓ **Printing a Row of Question Marks in C**  
-- In the terminal window, type `code mario.c` and add the following code:  
-  ```c  
-  // Prints a row of 4 question marks with a loop  
-  #include <stdio.h>  
-  
-  int main(void)  
-  {  
-      for (int i = 0; i < 4; i++)  
-      {  
-          printf("?");  
-      }  
-      printf("\n");  
-  }  
-  ```  
-🔁 Notice how four question marks are printed using a `for` loop
-##
-🧱 **Creating Three Vertical Blocks in C**
-
-- Just like printing horizontal question marks, we can apply the same logic to create **three vertical blocks**  
-- Instead of printing all `?` on the same line, we'll print one per line
-
-### Example Code
-```c
-#include <stdio.h>
-
-int main(void)
-{
-    for (int i = 0; i < 3; i++)
-    {
-        printf("?\n");
-    }
-}
-```
-
-- 📏 This prints:
-  ```
-  ?
-  ?
-  ?
-  ```
 - 🔁 The `for` loop runs **3 times**, printing a single `?` followed by a new line (`\n`) each time  
 - ⬆️ This gives the appearance of **vertical blocks**, like a column in a Mario level
-##
-🧱 **Printing a Column of Vertical Bricks in C**
-
-- To create three vertical blocks (like bricks in a wall or in Mario), we can use a loop that prints a single `#` followed by a newline each time  
+- 
+- What if we wanted to combine these ideas to create a three-by-three group of blocks?
+-  We can use a loop that prints a single `#` followed by a newline each time  
 - Below is the modified code:
+---
 
-```c
-// Prints a column of 3 bricks with a loop
+<img width="960" height="540" alt="cs50Week1three-by-three group of blocks7" src="https://github.com/user-attachments/assets/8c4b2a15-e6eb-446f-b963-511cd216b627" />
+
+We can follow the logic above, combining the same ideas. Modify your code as follows:
+```bash
+// Prints a 3-by-3 grid of bricks with nested loops
+
 #include <stdio.h>
 
 int main(void)
 {
     for (int i = 0; i < 3; i++)
     {
-        printf("#\n");
-    }
-}
-```
-
-- 🔁 Notice how three vertical bricks are printed using a `for` loop  
-- Each `#` represents a single brick, printed on its own line  
-- 📏 This results in:
-  ```
-  #
-  #
-  #
-  ```
-🧱 **Using Constants for Fixed Block Size in a 3x3 Grid**
-
-- When creating a grid (like a Mario-style block wall), we can make our code more robust by using a **constant** for the number of blocks  
-- This ensures the value is **unchangeable** and clearly defined at the top of the program
-
-### ✅ Updated Code with Constant
-
-```c
-// Prints a 3x3 grid of blocks using constants
-#include <stdio.h>
-
-#define SIZE 3
-
-int main(void)
-{
-    for (int i = 0; i < SIZE; i++)  // Loop for rows
-    {
-        for (int j = 0; j < SIZE; j++)  // Loop for columns
+        for (int j = 0; j < 3; j++)
         {
             printf("#");
         }
-        printf("\n");  // Move to the next line after each row
+        printf("\n");
     }
 }
 ```
+- Notice that one loop is inside another.
+- The first loop defines what vertical row is being printed. For each row, three columns are printed.
+- After each row, a new line is printed.
 
-### 📋 Output
+- What if we wanted to ensure that the number of blocks is constant, that is, unchangeable? Modify your code as follows:
+```bash
+// Prints a 3-by-3 grid of bricks with nested loops using a constant
 
-```
-###
-###
-###
-```
-
-### 🔍 Explanation
-- `#define SIZE 3` creates a constant `SIZE` that sets the dimensions of the grid  
-- The outer loop prints each **row**  
-- The inner loop prints each **column** of blocks for that row  
-- After each row is completed, `printf("\n")` moves to the next line  
-- 🧠 Using constants like `SIZE` makes the code cleaner, more readable, and easier to scale later
-
-This approach helps enforce **consistency** and improves the **design** of your code. 🧱✨
-
----
-
-🧱 **Using Constants for Fixed Block Size**
-
-- What if we wanted to ensure that the number of blocks is constant, that is, unchangeable?  
-- Modify your code as follows:  
-  ```c
-  // Prints a 3x3 grid of blocks using constants
-  #include <stdio.h>
-
-  #define SIZE 3
-
-  int main(void)
-  {
-      for (int i = 0; i < SIZE; i++)  // Loop for rows
-      {
-          for (int j = 0; j < SIZE; j++)  // Loop for columns
-          {
-              printf("#");
-          }
-          printf("\n");  // Move to the next line after each row
-      }
-  }
-  ```
-
-🧱 **Abstracting Row Printing into a Function**
-
-- Notice how `n` is now a constant—declared with `const int n = 3;`, so it **cannot be changed**  
-- We can further improve our code by **abstracting repeated behavior into functions**  
-- Below is the improved version using a helper function:
-
-```c
-// Helper function
 #include <stdio.h>
 
-void print_row(int width);
-  
 int main(void)
 {
     const int n = 3;
     for (int i = 0; i < n; i++)
     {
-        print_row(n);
+        for (int j = 0; j < n; j++)
+        {
+            printf("#");
+        }
+        printf("\n");
     }
-}
-
-void print_row(int width)
-{
-    for (int i = 0; i < width; i++)
-    {
-        printf("#");
-    }
-    printf("\n");
 }
 ```
-
-- 🔍 Notice how printing a row is now accomplished through a new function called `print_row`  
-- 🧩 `print_row(int width)` handles printing a single row of `#` characters  
-- 📦 This makes the `main` function cleaner and more focused on logic, not implementation  
-- 🔑 This is a key step toward writing **modular, maintainable, and scalable** code
+- Notice how n is now a constant. It can never be changed.
 ---
-
-📝 **The Importance of Comments in Code**
-
-- Comments are essential parts of a computer program—used to leave **explanatory notes** for yourself and others who may read or collaborate on your code  
-- 📚 In this course, **all code must include detailed comments**  
-- Each comment should be a few words or more, clearly explaining the purpose of a specific block of code  
-- 💡 Comments also serve as **reminders** for you when you return to your code later for revision  
-
-### ✅ Updated Code with Comments
-
-```c
+# ✍️ Comments 
+---
+- All code you create for this course must include robust comments.  
+- Typically, each comment is a few words or more, providing the reader an opportunity to understand what is happening in a specific block of code. Further, such comments serve as a reminder for you later when you need to revise your code.  
+- Each comment begins with `//`
+- Comments involve placing // into your code, followed by a comment.
+- 🧠 This tells the compiler to **ignore the line** while making the code more understandable for humans  
+- 🛠️ Good commenting improves **readability**, **maintainability**, and **collaboration** in programming
+- As illustrated earlier in this lecture, we can abstract away functionality into functions. Consider the following code:
+-  Modify your code as follows to integrate comments:
+```bash
 // Helper function
 
 #include <stdio.h>
@@ -1011,17 +770,16 @@ void print_row(int width)
     printf("\n");
 }
 ```
-
-- 📎 Notice how each comment begins with `//`  
-- 🧠 This tells the compiler to **ignore the line** while making the code more understandable for humans  
-- 🛠️ Good commenting improves **readability**, **maintainability**, and **collaboration** in programming
-
----
-
-🧮 **More About Operators – Building a Simple Calculator in C**
-
-```c
+- 🔍 Notice how printing a row is now accomplished through a new function called `print_row`  
+- 🧩 `print_row(int width)` handles printing a single row of `#` characters  
+- 📦 This makes the `main` function cleaner and more focused on logic, not implementation  
+- 🔑 This is a key step toward writing **modular, maintainable, and scalable** code
+## 🧮 More About Operators – Building a Simple Calculator in C  
+- 
+You can implement a calculator in C. In your terminal, type code calculator.c and write code as follows:
+```bash
 // Addition with int
+
 #include <cs50.h>
 #include <stdio.h>
 
@@ -1040,18 +798,14 @@ int main(void)
     printf("%i\n", z);
 }
 ```
-
-- 📥 The `get_int` function is used to obtain an integer from the user twice  
-- 📦 The first integer is stored in `x`, and the second in `y`  
-- ➕ The `+` operator adds the two integers, and the result is stored in `z`  
-- 🖨️ `printf("%i\n", z);` prints the result using `%i` as a placeholder for an integer  
-- 🧠 This demonstrates how to use **basic operators** and **user input** to build a simple calculator in C  
-
+- Notice how the `get_int` function is utilized to obtain an integer from the user twice.
+- One integer is stored in the `int` variable called `x`
+- Another is stored in the int variable called `y`
+- The sum is stored in `z`
+- Then, the `printf` function prints the value of `z`, designated by the `%i` symbol.
 ---
-
-💰 **Doubling a Number – Understanding Integer Overflow in C**
-
-```c
+- # 🔣🔣 We can also double a number
+```bash
 // int
 
 #include <cs50.h>
@@ -1075,54 +829,20 @@ int main(void)
     printf("Here's $%i.\n", dollars);
 }
 ```
-
-- 🔁 This program starts with `$1` and keeps doubling it as long as the user types `y`  
+- 👉 Running this program, some seeming errors appear in dollars. - Why is this?
+🔁 This program starts with `$1` and keeps doubling it as long as the user types `y`  
 - 💥 However, after a certain number of doublings, the value of `dollars` may appear to **behave incorrectly** or **reset unexpectedly**
-
-### 🤔 Why Does This Happen?
-
-- 🧮 In C, the `int` data type typically uses **32 bits** to store values (on most systems)  
-- This means the **maximum positive value** an `int` can hold is **2,147,483,647**  
-- When the value exceeds this limit, **integer overflow** occurs  
-- 🧨 Integer overflow leads to **undefined behavior**, often causing the number to "wrap around" to a negative value or reset to 0
-
-### 🧪 Example of Overflow
-If `dollars` reaches `1,073,741,824` and is doubled:
-- `dollars *= 2;` → becomes `2,147,483,648`  
-- This exceeds `INT_MAX` (2,147,483,647), so it **overflows** and wraps around to a **negative number** or behaves unpredictably
-
-### ✅ Fix or Prevent?
-- To handle larger values, you can use `long long` instead of `int`, which gives you **64 bits** of storage  
-- Or you can add a condition to break the loop when a safe limit is reached
-
----
-
-🧱 **Understanding C's Memory Management and Data Types**
-
-- One of C’s **shortcomings** is how easily it allows **memory mismanagement**  
-  - While C gives you **fine-grained control** over memory, it also places the **responsibility on you** to manage it carefully  
-  - Improper handling can lead to **overflow**, **corruption**, or **undefined behavior**
-
-### 🔤 What Are Types in C?
-
-- **Types** define what kind of data a variable can hold and how much memory it uses  
-- Each type has **specific limits**, determined by how many **bits** it occupies in memory  
-- These limits are crucial to avoid **overflows** and ensure **correct program behavior**
-
-### 📉 Integer Overflow: A Common Pitfall
-
-- For example, an **`int`** typically uses **32 bits**, allowing values from **-2,147,483,648 to 2,147,483,647**  
-- If you attempt to go beyond this range, **integer overflow** occurs  
-  - The value wraps around unpredictably, often leading to **incorrect results** or **security vulnerabilities**
-
-### ✅ Fixing Overflow with `long`
-
-- We can correct this by using a **`long`**, which typically uses **64 bits**  
-- This allows much larger values, significantly reducing the risk of overflow  
-- Example:
-
-```c
+- One of C’s shortcomings is the ease by which it manages memory. While C provides you immense control over how memory is utilized, programmers have to be very aware of the potential pitfalls of memory management. Can you add this inside a bullet, for this one we do not need a heading  
+- Types refer to the possible data that can be stored within a variable. For example, a char is designed to accommodate a single character like a or 2.  
+- Types are very important because each type has specific limits. For example, because of the limits in memory, _the highest value of an `int` can_ be **4294967295**.
+- If you attempt to count an int higher, an _integer overflow_**** will result where an incorrect value will be stored in this variable.
+  
+- The number of bits limits how high and low we can count.  
+- This can have catastrophic, real-world impacts.  
+- We can correct this by using a data type called `long`.
+```bash
 // long
+
 #include <cs50.h>
 #include <stdio.h>
 
@@ -1144,36 +864,35 @@ int main(void)
     printf("Here's $%li.\n", dollars);
 }
 ```
-
-- 💰 Notice how this version allows **much higher dollar amounts** without overflow  
-- `%li` is used to print a `long` integer in `printf`
-
-### 📋 Common Data Types in C
-
-- `bool` – A Boolean value (`true` or `false`)  
-- `char` – A single character (e.g., `'a'` or `'2'`)  
-- `double` – A **double-precision** floating-point number (more precision than `float`)  
-- `float` – A **single-precision** floating-point number  
-- `int` – Integer with typical 32-bit limit  
-- `long` – Integer with larger size (typically 64 bits)  
-- `string` – A sequence (array) of characters (not a built-in type in standard C, but used in CS50)
-
-### 🧠 Why This Matters
-
-- Understanding types and memory helps you write **safe**, **efficient**, and **reliable** code  
-- In real-world systems (like aviation, banking, or medical devices), **memory mismanagement** can have **catastrophic consequences**  
-- Using the right types and being aware of their limits is a **fundamental skill** in C programming
 ---
-
-🚫 **Truncation in C – When Precision Gets Lost**
-
-- Truncation is another issue that arises when working with data types in C  
-- It often occurs during **integer division**, where any fractional part is simply **discarded** (not rounded)
-
+👉 Notice how running this code will allow for very high dollar amounts.
+---
+## ➡️ Types with which you might interact during this course include:
+- `` `bool` ``, a Boolean expression of either true or false  
+- `` `char` ``, a single character like a or 2  
+- `` `double` ``, a floating-point value with more digits than a float  
+- `` `float` ``, a floating-point value, or a real number with a decimal value  
+- `` `int` ``, integers up to a certain size, or number of bits  
+- `` `long` ``, integers with more bits, so they can count higher than an int  
+- `` `string` ``, a string of characters
+---
+# ✂️ Truncation 
+---
+## (cutting off part of a value, typically without rounding, resulting in a shortened or simplified version.)
+- Removing decimal places from a floating-point number without rounding.
+## For example:
+- Truncating 3.789 results in 3 (all digits after the decimal are simply dropped).
+- Shortening data, such as strings or files, by cutting off content beyond a certain point.
+## For example:
+- Truncating the string "HelloWorld" to 5 characters gives "Hello".
+- Memory or variable overflow, where a value is too large to fit in a data type and gets cut off,              potentially leading to data loss or errors.
+---
+## Another issue that can arise when using data types includes truncation
 ### 🔍 Example: Integer Division with Truncation
 
-```c
+```bash
 // Division with ints, demonstrating truncation
+
 #include <cs50.h>
 #include <stdio.h>
 
@@ -1189,7 +908,7 @@ int main(void)
     printf("%i\n", x / y);
 }
 ```
-
+⭐ An integer divided by an integer will always result in an integer in C. Accordingly, the above code will often result in any digits after the decimal being thrown away.
 - ➗ In C, dividing two `int` values results in an `int`  
 - 📉 This means that any **decimal portion is truncated**, not rounded  
   - Example: `5 / 2` results in `2`, not `2.5`  
@@ -1198,10 +917,9 @@ int main(void)
 ### 🧠 Why This Matters
 
 - Truncation can lead to **unexpected results** in calculations  
-- It's especially important in applications where **precision is critical**, like finance, science, or engineering
-
-### ✅ Fix: Use `float` or `double` for Division with Decimals
-
+- It's especially important in applications where **precision is critical**, like finance, science, or engineering.
+---
+👌 This can be solved by using `float` or `double` for Division with Decimals.
 To preserve decimal precision, cast one of the operands to a floating-point type:
 
 ```c
@@ -1210,7 +928,6 @@ printf("%f\n", (float) x / y);
 
 - 📌 This avoids truncation and gives you the full floating-point result  
 - `%f` is the format specifier for `float` or `double` in `printf`
----
 
 🚫 **Floating Point Imprecision – A New Kind of Problem**
 
@@ -1218,9 +935,9 @@ printf("%f\n", (float) x / y);
 - However, it introduces a new issue: **floating point imprecision**
 
 ### 🔍 Example: Division with `float`
-
-```c
+```bash
 // Floats
+
 #include <cs50.h>
 #include <stdio.h>
 
@@ -1236,34 +953,30 @@ int main(void)
     printf("%.50f\n", x / y);
 }
 ```
-
-- 🔎 Notice that using `%.50f` prints up to **50 decimal places**  
+- 🔎 Notice that using `%.50f` prints up to **50 decimal places**
 - 💥 But the result may show **unexpected decimal values**, like:
   - `1.0 / 10.0` might print as `0.1000000014901161193677...` instead of `0.1`
-
 ### 📉 Why Floating Point Imprecision Happens
-
+---
+- Floating point imprecision illustrates that there are limits to how precise computers can calculate numbers.
 - Computers store floating-point numbers using **binary fractions**  
 - Some decimal numbers (like `0.1`) can't be represented exactly in binary  
 - This leads to **tiny rounding errors** that accumulate over time
-
-### 🧠 Real-World Consequences
-
-- Floating point errors have led to **real-world disasters**, including:
-  - **Patriot Missile Failure (1991)** – A rounding error caused a missile to fail, resulting in 28 deaths  
-  - **Ariane 5 Rocket Explosion (1996)** – A floating point conversion error caused a $370 million loss  
-
+  **Patriot Missile Failure (1991)** – A rounding error caused a missile to fail, resulting in 28 deaths  
+  - **Ariane 5 Rocket Explosion (1996)** – A floating point conversion error caused a $370 million loss
+---
 ### ✅ Best Practices
-
+---
+As you are coding, pay special attention to the types of variables you are using to avoid problems within your code.
 - Be cautious when choosing **data types** in C  
 - Use `float` or `double` when you need decimal precision  
 - Use `int` or `long` when fractional values aren’t needed  
 - Always **think about the limits** of each type and how they affect your program
+  
+## 🎓 **Summing Up – Key Takeaways from This Lesson**
 ---
-
-🎓 **Summing Up – Key Takeaways from This Lesson**
-
-- 🧱 Learned how to apply programming concepts from **Scratch** to the **C programming language**  
+In this lesson, you learned how to apply the building blocks you learned in Scratch to the C programming language. You learned…
+- how to apply programming concepts from **Scratch** to the **C programming language**  
 - 💻 Created your **first program in C** and became familiar with the **command line**  
 - 📦 Explored **predefined functions** that come natively with C  
 - 🛠️ Used **variables**, **conditionals**, and **loops** to build logic into your programs  
@@ -1277,6 +990,3 @@ int main(void)
   - 🧨 **Integer overflow**
   - 🔍 **Floating point imprecision**
   - 🧱 **Memory management pitfalls**
-
-This foundation sets you up for writing **robust, readable, and safe** C programs. Keep building! 💪💻
----
