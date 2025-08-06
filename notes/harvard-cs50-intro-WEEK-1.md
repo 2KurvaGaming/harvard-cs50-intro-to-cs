@@ -679,7 +679,6 @@ int main(void)
     }
 }
 ```
----
 - 🔁 The `for` loop runs **3 times**, printing a single `?` followed by a new line (`\n`) each time  
 - ⬆️ This gives the appearance of **vertical blocks**, like a column in a Mario level
 - 
